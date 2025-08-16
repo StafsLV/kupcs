@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="lv">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jānis Kupčs — Iepazīšanās pieteikums</title>
+    <meta name="description" content="Iepazīsimies! Aizpildi pieteikumu, ja vēlies doties uz randiņu ar Jāni Kupču." />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-decor"></div>
+
+    <header class="container hero">
+        <div class="hero-text">
+            <span class="badge"><span class="dot"></span> Pieteikumi atvērti</span>
+            <h1>Sveika 👋 Es esmu <span class="nowrap">Jānis Kupčs</span></h1>
+            <p class="lead">Ja jūties ziņkārīga un drosmīga — aizpildi pieteikumu un izdomāsim mūsu pirmo randiņu.
+                Cieņpilna komunikācija, labs humors un nulle drāmas. 🙂</p>
+            <div class="cta">
+                <a class="btn btn-primary" href="#pieteikums">Aizpildīt pieteikumu</a>
+                <a class="btn btn-ghost" href="#par">Uzzināt par mani</a>
+            </div>
+        </div>
+
+        <!-- FOTO VIETA -->
+        <aside class="card photo-card">
+            <div class="photo-frame">
+                <!-- Nomaini src uz savu bildi -->
+                <img src="/427963802_7366389826746848_1811302348415791585_n.jpg" alt="Jāņa profila bilde"
+                    loading="lazy">
+            </div>
+            <div class="photo-meta">
+                <h2 class="name">Jānis Kupčs</h2>
+                <p class="subtitle">Armijnieks</p>
+            </div>
+        </aside>
+    </header>
+
+    <main class="container">
+        <section class="card form-card" id="pieteikums">
+            <h2 class="section-title">Iepazīšanās pieteikums</h2>
+            <p class="muted">Aizpildi pāris laukus — Jānis atbildēs, ja būs labs sajūtu sakritums.</p>
+
+            <!-- Pievieno savu backend: action="https://formspree.io/f/XXXX" vai citu -->
+            <form action="#" method="post" novalidate class="form">
+                <div class="grid two">
+                    <label class="field">
+                        <span>Vārds, uzvārds</span>
+                        <input type="text" name="name" placeholder="Piem., Anna Kalniņa" required>
+                    </label>
+                    <label class="field">
+                        <span>Vecums</span>
+                        <input type="number" name="age" min="18" max="99" placeholder="18+" required>
+                    </label>
+                </div>
+
+                <div class="grid two">
+                    <label class="field">
+                        <span>Pilsēta</span>
+                        <input type="text" name="city" placeholder="Piem., Rīga" required>
+                    </label>
+                    <label class="field">
+                        <span>Instagram / WhatsApp</span>
+                        <input type="text" name="contact" placeholder="@tavsprofils vai +371..." required>
+                    </label>
+                </div>
+
+                <div class="grid two">
+                    <label class="field">
+                        <span>E-pasts (alternatīvi)</span>
+                        <input type="email" name="email" placeholder="tu@piemers.lv">
+                    </label>
+                    <label class="field">
+                        <span>Ko šobrīd meklē?</span>
+                        <select name="goal" required>
+                            <option value="" disabled selected>Izvēlies...</option>
+                            <option>Viegla iepazīšanās</option>
+                            <option>Nopietnas attiecības</option>
+                            <option>Vēl nezinu — paskatīsimies</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>Kas tevi uzrunāja par Jāni?</span>
+                    <textarea name="why" placeholder="Humors, kopīgas intereses u.c." required></textarea>
+                </label>
+
+                <label class="field">
+                    <span>Tava ideja pirmajam randiņam</span>
+                    <textarea name="idea" placeholder="Kafija, pastaiga gar Daugavu, izstāde vai kas traks?"
+                        required></textarea>
+                </label>
+
+                <div class="grid two">
+                    <label class="field">
+                        <span>Kad parasti vari tikties?</span>
+                        <select name="time" required>
+                            <option value="" disabled selected>Izvēlies...</option>
+                            <option>Darbadienu vakari</option>
+                            <option>Brīvdienu rīti</option>
+                            <option>Brīvdienu vakari</option>
+                            <option>Elastīgi — sarunāsim</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span>Kas tev ir “noteikti svarīgi”?</span>
+                        <input type="text" name="dealbreaker" placeholder="Cieņa, humors, atsaucība">
+                    </label>
+                </div>
+
+                <label class="agree">
+                    <input type="checkbox" name="privacy" required>
+                    <span>Piekrītu, ka mana informācija tiks nodota Jānim saziņas nolūkos.</span>
+                </label>
+
+                <button class="btn btn-primary" type="submit">Iesniegt pieteikumu ❤️</button>
+                <p class="fineprint muted">Dati tiks izmantoti tikai atbildes sniegšanai — bez spama.</p>
+            </form>
+        </section>
+
+        <footer class="footer">
+            © <span id="y"></span> Jānis Kupčs · Izstrādāja: Tava mamma
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
